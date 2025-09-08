@@ -1,0 +1,7 @@
+arb-dir: lib/src/l10n
+output-class: ChtEmaSurveysLocalization
+template-arb-file: package_en.arb
+output-localization-file: cht_ema_surveys_localization.dart
+output-dir: lib/src/l10n
+synthetic-package: false
+nullable-getter: false
