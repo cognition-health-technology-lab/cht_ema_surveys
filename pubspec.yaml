@@ -1,0 +1,23 @@
+name: cht_ema_survey
+description: "Provides pre-built surveys for use in ecological momentary assessment (EMA) studies."
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: ">=3.3.2 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  generate: true

@@ -1,0 +1,6 @@
+{
+  "@@locale": "en",
+  "appTitle": "Template Example",
+  "hello": "Hello",
+  "tapToIncrement": "Tap to increment"
+}

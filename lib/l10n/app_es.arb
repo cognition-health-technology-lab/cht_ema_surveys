@@ -1,0 +1,6 @@
+{
+  "@@locale": "es",
+  "appTitle": "Ejemplo de Plantilla",
+  "hello": "Hola",
+  "tapToIncrement": "Toca para incrementar"
+}
