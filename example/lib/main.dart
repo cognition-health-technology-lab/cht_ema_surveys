@@ -6,8 +6,15 @@ void main() {
   runApp(const ExampleApp());
 }
 
-class ExampleApp extends StatelessWidget {
+class ExampleApp extends StatefulWidget {
   const ExampleApp({super.key});
+
+  @override
+  State<ExampleApp> createState() => _ExampleAppState();
+}
+
+class _ExampleAppState extends State<ExampleApp> {
+  Locale? locale;
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +33,18 @@ class ExampleApp extends StatelessWidget {
         Locale('en'),
         Locale('es'),
       ],
-      home: const HomePage(),
+      locale: locale,
+      home: HomePage(
+          onLocaleChange: (Locale? locale) =>
+              setState(() => this.locale = locale)),
     );
   }
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  final Function(Locale?) onLocaleChange;
+
+  const HomePage({super.key, required this.onLocaleChange});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -46,6 +58,24 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(localizations.appTitle),
+        actions: <Widget>[
+          PopupMenuButton<Locale?>(
+            tooltip: localizations.languageToolTip,
+            onSelected: widget.onLocaleChange,
+            itemBuilder: (BuildContext context) {
+              return [
+                PopupMenuItem<Locale?>(
+                  value: const Locale('en'),
+                  child: Text(localizations.langOptionEn),
+                ),
+                PopupMenuItem<Locale?>(
+                  value: const Locale('es'),
+                  child: Text(localizations.langOptionEs),
+                ),
+              ];
+            },
+          )
+        ],
       ),
       body: Center(
         child: Column(
