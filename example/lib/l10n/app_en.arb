@@ -1,4 +1,11 @@
 {
-  "appTitle": "CHT EMA Surveys Example",
-  "homeMessage": "Home screen"
+  "@@locale": "en",
+  "appTitle": "CHT Surveys Example",
+  "@appTitle": {
+    "description": "Title for the app"
+  },
+  "homeMessage": "Home screen",
+  "@homeMessage": {
+    "description": "Message displayed on the home screen"
+  }
 }
