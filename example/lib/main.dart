@@ -71,16 +71,28 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              localizations.homeMessage,
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+      body: const SurveyList(),
+    );
+  }
+}
+
+class SurveyList extends StatelessWidget {
+  const SurveyList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final AppLocalizations localizations = AppLocalizations.of(context)!;
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            localizations.homeMessage,
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+        ],
       ),
     );
   }
