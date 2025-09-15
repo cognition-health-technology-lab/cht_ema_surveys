@@ -13,6 +13,7 @@ class ExampleApp extends StatefulWidget {
 }
 
 class _ExampleAppState extends State<ExampleApp> {
+  /// Null defaults to the system locale.
   Locale? locale;
 
   @override
