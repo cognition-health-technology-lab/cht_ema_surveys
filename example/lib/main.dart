@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
             tooltip: localizations.languageToolTip,
             onSelected: widget.onLocaleChange,
             itemBuilder: (BuildContext context) {
-              return [
+              return <PopupMenuItem<Locale?>>[
                 PopupMenuItem<Locale?>(
                   value: const Locale('en'),
                   child: Text(localizations.langOptionEn),
