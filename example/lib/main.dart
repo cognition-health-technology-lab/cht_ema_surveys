@@ -26,10 +26,12 @@ class _ExampleAppState extends State<ExampleApp> {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: locale,
-      home: HomePage(
-          onLocaleChange: (Locale? locale) =>
-              setState(() => this.locale = locale)),
+      home: HomePage(onLocaleChange: changeLocale),
     );
+  }
+
+  void changeLocale(Locale? locale) {
+    setState(() => this.locale = locale);
   }
 }
 
