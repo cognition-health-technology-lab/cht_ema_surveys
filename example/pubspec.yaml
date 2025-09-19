@@ -15,6 +15,12 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  cht_ema_surveys:
+    path: ../../cht_ema_surveys
+  research_package:
+    git:
+      url: https://github.com/mario-bermonti/research.package.git
+      ref: 90829448e20fa72ce34ee740dac25849078cb2de
 
 dev_dependencies:
   flutter_test:

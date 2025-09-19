@@ -1,3 +1,4 @@
+import 'package:cht_ema_surveys/cht_ema_surveys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -84,15 +85,25 @@ class SurveyList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final AppLocalizations localizations = AppLocalizations.of(context)!;
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            localizations.homeMessage,
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-        ],
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SurveyPage(),
+                ),
+              ),
+              child: Text(
+                localizations.homeMessage,
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
