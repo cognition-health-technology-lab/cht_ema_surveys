@@ -1,6 +1,7 @@
 import 'package:cht_ema_surveys/cht_ema_surveys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:research_package/ui.dart';
 
 void main() {
   runApp(const ExampleApp());
@@ -24,7 +25,10 @@ class _ExampleAppState extends State<ExampleApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: [
+        RPLocalizations.delegate,
+        ...AppLocalizations.localizationsDelegates
+      ],
       supportedLocales: AppLocalizations.supportedLocales,
       locale: locale,
       home: HomePage(onLocaleChange: changeLocale),

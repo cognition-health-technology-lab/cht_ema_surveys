@@ -9,9 +9,10 @@ class SurveyPage extends StatelessWidget {
 
   final RPOrderedTask task = RPOrderedTask(identifier: 'survey_task', steps: [
     RPInstructionStep(
-        identifier: 'instruction_step',
-        title: 'Welcome',
-        text: 'This is an example of an EMA survey.'),
+      identifier: 'instruction_step',
+      title: 'Welcome',
+      text: 'surveyInstructions',
+    ),
   ]);
 
   @override
