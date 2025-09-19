@@ -1,6 +1,7 @@
 {
   "@@locale": "es",
-  "appTitle": "Ejemplo de Plantilla",
-  "hello": "Hola",
-  "tapToIncrement": "Toca para incrementar"
+  "surveyInstructions": "Ejemplo de una encuesta EMA",
+  "@surveyInstructions": {
+    "description": "Instructions for the EMA survey"
+  }
 }
