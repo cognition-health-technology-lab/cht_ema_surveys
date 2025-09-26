@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  prepare_package:
+  build_android:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
@@ -34,9 +34,6 @@ jobs:
       - name: Install package dependencies
         run: flutter pub get
 
-  build_android:
-    runs-on: ubuntu-latest
-    steps:
       - name: Install application dependencies
         working-directory: example
         run: flutter pub get
